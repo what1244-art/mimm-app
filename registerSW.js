@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/mimm-app/sw.js', { scope: '/mimm-app/' })})}
