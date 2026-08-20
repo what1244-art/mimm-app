@@ -1,0 +1,145 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MIMM 연습실 — 레스너를 위한 연습실</title>
+<meta name="description" content="레스너를 위한 24시간 무인 연습실 MIMM. 방음 연습실 6개, 녹음실, 합주실. 기타·피아노·앰프·마이크·드럼 완비. 새벽 반값, 레슨생 혜택.">
+<meta property="og:title" content="MIMM 연습실 — 레스너를 위한 연습실">
+<meta property="og:description" content="기타·피아노·앰프·드럼까지, MIMM엔 다 있습니다. 24시간 무인 · 새벽 반값 · 레스너 등록 무료">
+<meta property="og:image" content="https://what1244-art.github.io/mimm-app/rooms/H-band.jpg">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;900&family=Noto+Sans+KR:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;word-break:keep-all;color:#141414;background:#fff}
+.wrap{max-width:480px;margin:0 auto;padding:24px 22px 40px}
+.brand{font-family:"Noto Serif KR",serif;font-weight:900;letter-spacing:6px;font-size:16px;padding-bottom:13px;border-bottom:2.5px solid #141414;display:flex;justify-content:space-between;align-items:baseline}
+.brand a{font-family:"Noto Sans KR",sans-serif;letter-spacing:0;font-size:12px;font-weight:800;color:#8a8578;text-decoration:none}
+.chat{margin:22px 0 6px;display:flex;flex-direction:column;gap:9px}
+.who{font-size:11px;color:#a5a19a;font-weight:800;margin-bottom:-5px}.who.r{align-self:flex-end}
+.b{max-width:80%;padding:11px 14px;border-radius:17px;font-size:14.5px;font-weight:700;line-height:1.45}
+.stu{background:#f1f0ec;align-self:flex-start;border-bottom-left-radius:5px}
+.les{background:#141414;color:#fff;align-self:flex-end;border-bottom-right-radius:5px}
+h1{font-family:"Noto Serif KR",serif;font-weight:900;font-size:29px;line-height:1.34;margin:20px 0 8px}
+h1 em{font-style:normal;border-bottom:5px solid #b8860b}
+h2{font-family:"Noto Serif KR",serif;font-weight:900;font-size:21px;margin:34px 0 12px}
+.sub{font-size:14px;color:#77726a;font-weight:600;line-height:1.65}
+.strip{display:flex;gap:5px;margin:16px 0 4px}
+.strip img{flex:1;min-width:0;height:72px;object-fit:cover;border-radius:10px}
+.strip-cap{font-size:11.5px;color:#a5a19a;font-weight:700;text-align:right;margin-bottom:8px}
+.feat{border-top:1.5px solid #ececea;padding:12px 2px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.feat b{font-size:15px;font-weight:900}.feat span{font-size:12px;color:#b8860b;font-weight:800;text-align:right}
+.cta{margin-top:18px;display:flex;flex-direction:column;gap:9px}
+.btn{border-radius:15px;padding:16px;text-align:center;font-size:16px;font-weight:900;border:2.5px solid #141414;text-decoration:none;color:#141414;display:block}
+.btn.k{background:#141414;color:#fff}
+.status{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.st{border:2px solid #141414;border-radius:13px;padding:10px 4px;text-align:center}
+.st .r{font-family:"Noto Serif KR",serif;font-weight:900;font-size:19px}
+.st .s{font-size:11px;font-weight:800;margin-top:2px}
+.st.free .s{color:#1a7f4e}.st.busy{background:#f1f0ec;border-color:#d9d5cc}.st.busy .s{color:#b0655a}
+.st .t{font-size:10px;color:#a5a19a;font-weight:700}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1.5px solid #ececea}
+.price-row .nm{font-family:"Noto Serif KR",serif;font-weight:900;font-size:19px}
+.price-row .ds{font-size:12px;color:#8a8578;font-weight:600;margin-left:8px}
+.price-row .pr{font-size:17px;font-weight:900}
+.mem{border:2.5px solid #141414;border-radius:16px;padding:14px 15px;margin-top:10px}
+.mem h3{font-family:"Noto Serif KR",serif;font-size:16.5px;font-weight:900}
+.mem p{font-size:12px;color:#8a8578;font-weight:700;margin:2px 0 6px}
+.mem .pl{display:flex;justify-content:space-between;font-size:13.5px;font-weight:700;padding:3.5px 0}
+.mem .pl b{font-weight:900}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:11px;cursor:pointer}
+.note{font-size:12px;color:#a5a19a;font-weight:600;margin-top:8px;line-height:1.6}
+.lb{position:fixed;inset:0;background:rgba(12,11,9,.93);display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:99;padding:24px}
+.lb img{max-width:96%;max-height:78%;border-radius:16px;object-fit:contain}
+.lb p{color:#fff;font-weight:800}
+.foot{margin-top:36px;padding-top:14px;border-top:2.5px solid #141414;font-size:12px;color:#8a8578;font-weight:600;line-height:1.8}
+#inapp{display:none;position:fixed;inset:0;background:#141414;color:#fff;z-index:999;padding:40px 28px;text-align:center}
+#inapp h3{font-size:22px;font-weight:900;margin-bottom:12px}#inapp p{font-size:14.5px;line-height:1.7;color:#c9c4b8}
+#inapp button{margin-top:20px;border:2.5px solid #fff;background:none;color:#fff;border-radius:14px;padding:14px 36px;font-weight:900;font-size:15px}
+</style></head><body>
+<div id="inapp"><h3>외부 브라우저로 열어주세요</h3><p>카카오톡·인스타그램 안에서는 일부 기능이 제한돼요.<br>우측 상단 메뉴(⋯)에서 <b>"다른 브라우저로 열기"</b>를 눌러주세요.</p><button onclick="copyUrl()">주소 복사하기</button></div>
+<div class="wrap">
+<div class="brand">M I M M <a href="#price">요금 보기 ↓</a></div>
+
+<div class="chat">
+<span class="who">수강생</span><div class="b stu">기타 배우고 싶어서 왔어요!! 🙌</div>
+<span class="who r">레스너</span><div class="b les">혹시 기타는 있으신가요?</div>
+<span class="who">수강생</span><div class="b stu">앗, 아니요..! ㅠㅠ</div>
+<span class="who r">레스너</span><div class="b les">앗...</div>
+</div>
+<h1>이런 상황, 겪어보셨죠?<br><em>MIMM엔 다 있습니다.</em></h1>
+<p class="sub">기타·피아노·앰프·마이크·드럼까지 —<br>레스너도, 수강생도 몸만 오면 되는 연습실.</p>
+<div class="strip"><img src="../rooms/A.jpg" alt="A룸"><img src="../rooms/D.jpg" alt="D룸"><img src="../rooms/G.jpg" alt="G룸 녹음실"><img src="../rooms/H-band.jpg" alt="합주실"></div>
+<p class="strip-cap">방음 연습실 6개 + 녹음실 + 합주실</p>
+<div class="feat"><b>레스너 등록 무료</b><span>내 레슨생만의 혜택 제공</span></div>
+<div class="feat"><b>연습 장비 완비</b><span>기타 · 피아노 · 앰프 · 마이크 · 드럼</span></div>
+<div class="feat"><b>새벽 0~8시 반값</b><span>회원은 절반만 차감</span></div>
+<div class="feat"><b>회원권, 다 못 써도 손해 없음</b><span>재구매하면 남은 기간 그대로 연장</span></div>
+<div class="feat" style="border-bottom:1.5px solid #ececea"><b>무인 24시간 · 연중무휴</b><span>키오스크로 바로 이용</span></div>
+<div class="cta"><a class="btn k" href="#status">지금 빈 방 실시간 보기</a><a class="btn" id="naverBtn" href="KAKAO">네이버로 바로 예약</a></div>
+
+<h2 id="status">🟢 지금 빈 방</h2>
+<div class="status" id="statusGrid"><div class="st"><div class="r">…</div><div class="s">불러오는 중</div></div></div>
+<p class="note">30초마다 자동 갱신 · 예약은 네이버 예약 또는 현장 키오스크에서</p>
+
+<h2 id="price">💳 요금 안내</h2>
+<div class="price-row"><span><span class="nm">B·C</span><span class="ds">싱글방음</span></span><span class="pr">7,900원<small>/시간</small></span></div>
+<div class="price-row"><span><span class="nm">D·E</span><span class="ds">더블방음 · 피아노</span></span><span class="pr">8,900원</span></div>
+<div class="price-row"><span><span class="nm">A</span><span class="ds">싱글방음 · 피아노</span></span><span class="pr">9,900원</span></div>
+<div class="price-row"><span><span class="nm">F·G·H</span><span class="ds">스튜디오 · 녹음실 · 합주실(드럼)</span></span><span class="pr">11,900원</span></div>
+<p class="note">비회원 기준 · 피크(평일 16~20시·주말 12~20시) +1,000원 · 새벽 0~8시 50%</p>
+<div class="mem"><h3>통합 회원권</h3><p>B·C·D·E 자유 이용 · A/F/G 옵션 — 최대 30% 할인</p>
+<div class="pl"><span>스탠다드 20시간 · 30일</span><b>139,000원</b></div>
+<div class="pl"><span>디럭스 40+2시간 · 60일</span><b>269,000원</b></div>
+<div class="pl"><span>프리미엄 60+6시간 · 90일</span><b>389,000원</b></div></div>
+<div class="mem"><h3>트리플 방음 전용 (G·H)</h3><p>드럼 레슨 · 드럼 연습 — 프리미엄 환산 시간당 8,900원</p>
+<div class="pl"><span>스탠다드 ~ 프리미엄</span><b>219,000 ~ 589,000원</b></div></div>
+<div class="mem"><h3>밴드 회원권 (H홀)</h3><p>합주 전용 · 유효기간 1년</p>
+<div class="pl"><span>스탠다드 ~ 프리미엄</span><b>449,000 ~ 1,049,000원</b></div></div>
+<p class="note">회원권 구매는 현장 키오스크에서 · 재구매 시 남은 유효기간이 그대로 이월돼요</p>
+
+<h2>📷 공간 둘러보기</h2>
+<div class="gal" id="gal"></div>
+
+<h2>🎓 레스너이신가요?</h2>
+<p class="sub">MIMM에 등록(무료)하면 <b>내 레슨생만의 연습 혜택</b>이 생기고,<br>레슨 일정과 수강생을 앱에서 관리할 수 있어요.</p>
+<div class="cta"><a class="btn" href="KAKAO">카카오톡으로 레스너 등록 문의</a></div>
+
+<div class="foot"><b>MIMM 연습실</b><br>연중무휴 24시간 · 무인 운영<br>문의: 카카오톡 채널 MIMM · 010-3081-3730</div>
+</div>
+<div class="lb" id="lb" onclick="this.style.display='none'"><img id="lbImg" src=""><p id="lbCap"></p></div>
+<script>
+const KAKAO='http://qr.kakao.com/talk/h_Cl4JuyF.2chAxlMSn7HeqDVME-';
+const NAVER='';// TODO: 네이버 예약 URL 받으면 교체
+document.querySelectorAll('a[href="KAKAO"]').forEach(a=>a.href=KAKAO);
+document.getElementById('naverBtn').href = NAVER || KAKAO;
+// 인앱 브라우저 감지
+const ua=navigator.userAgent;
+if(/KAKAOTALK|Instagram|FBAN|FBAV|NAVER\(inapp|Line\//i.test(ua)){
+  if(/android/i.test(ua)){location.href='intent://'+location.host+location.pathname+'#Intent;scheme=https;package=com.android.chrome;end';}
+  else{document.getElementById('inapp').style.display='block';}
+}
+function copyUrl(){navigator.clipboard?.writeText(location.href);alert('주소가 복사됐어요! 사파리에 붙여넣어 주세요.');}
+// 갤러리
+const ROOMS=[['A','A룸 · 싱글방음 · 피아노'],['B','B룸 · 싱글방음'],['C','C룸 · 싱글방음'],['D','D룸 · 더블방음 · 피아노'],['E','E룸 · 더블방음 · 피아노'],['G','G룸 · 녹음실'],['H','H홀 · 드럼'],['H-band','H홀 · 합주실']];
+const gal=document.getElementById('gal');
+ROOMS.forEach(([id,cap])=>{const img=document.createElement('img');img.src='../rooms/'+id+'.jpg';img.alt=cap;img.loading='lazy';
+  img.onclick=()=>{document.getElementById('lbImg').src=img.src;document.getElementById('lbCap').textContent=cap;document.getElementById('lb').style.display='flex';};
+  img.onerror=()=>img.remove();gal.appendChild(img);});
+// 실시간 현황
+const SB='https://cwctsmiubezkglhjqrkm.supabase.co';
+const KEY='sb_publishable_Jd_BwqaWHiKzVIc8-VxHzA_vEG_rZXu';
+async function loadStatus(){
+  try{
+    const res=await fetch(SB+'/rest/v1/rpc/landing_room_status',{method:'POST',headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:'{}'});
+    const rows=await res.json();
+    if(!Array.isArray(rows))return;
+    document.getElementById('statusGrid').innerHTML=rows.map(r=>{
+      const free=!r.busy;
+      const t=r.free_at?new Date(r.free_at).toLocaleTimeString('ko-KR',{hour:'numeric',minute:'2-digit'}):'';
+      return `<div class="st ${free?'free':'busy'}"><div class="r">${r.id}</div><div class="s">${free?'지금 가능':'사용 중'}</div><div class="t">${free?'':t+' 부터'}</div></div>`;
+    }).join('');
+  }catch(e){}
+}
+loadStatus();setInterval(loadStatus,30000);
+</script>
+</body></html>
