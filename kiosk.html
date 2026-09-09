@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="color-scheme" content="only light" />
+  <!-- 아이패드 홈 화면 추가(테넷 키오스크, 2026-09-09): 앱 manifest 를 쓰지 않아야 start_url(회원앱)로 열리지 않고
+       추가한 그 주소(?site=tenet&cardpay=1)로 전체화면 실행된다. manifest 링크는 vite.config 의 kiosk-no-manifest 플러그인이 제거 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="키오스크" />
+  <link rel="apple-touch-icon" href="/mimm-app/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet" />
